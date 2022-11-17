@@ -1,0 +1,44 @@
+
+
+
+
+<style> .form-error {color:blue;}
+</style>
+{{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+<form>
+    <div class="row">
+        <div class="form-group">
+            <label class="bmd-label-floating">    {{ form_label(form.nom) }}
+            </label>
+            <input placeholder="Nom"  type="text" class="form-control" {{ form_widget(form.nom) }}
+            <div class="form-error">
+                {{ form_errors(form.nom) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="bmd-label-floating">    {{ form_label(form.email) }}
+            </label>
+            <input placeholder="Email"  type="text" class="form-control" {{ form_widget(form.email) }}
+            <div class="form-error">
+                {{ form_errors(form.email) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="bmd-label-floating">    {{ form_label(form.password) }}
+            </label>
+            <input placeholder="Password" type="text" class="form-control" {{ form_widget(form.password) }}
+            <div class="form-error">
+                {{ form_errors(form.password) }}
+            </div>
+        </div>
+    </div>
+        </div>
+
+<br>
+    </div>
+<div class="col-md-3">
+</div>
+
+    <button class="btn btn-primary pull-right">{{ button_label|default('Save') }}</button>
+</form>
+{{ form_end(form) }}
